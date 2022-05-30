@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Users from "./Users";
+import Posts from "./Posts";
+import Comments from "./Comments";
+import './index.css';
 
 function App() {
+
+const API_URL = 'https://jsonplaceholder.typicode.com/';
+
+const endPoints = ['posts', 'comments', 'users']
+
+const handleUsers = () => {
+  const reqUrl = `${API_URL}/${endPoints[``]}`
+ 
+}; 
+
+const handlePosts = () => {
+
+}; 
+
+const handleComments = () => {
+
+}; 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header className="App">
+     <Users handleUsers = {handleUsers}/>
+     <Posts handlePosts = {handlePosts}/>
+     <Comments handleComments = {handleComments}/>
+    </header>
   );
 }
 
